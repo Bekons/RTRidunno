@@ -1,8 +1,8 @@
 function lab5_demo
 global E R a i0
-R=1; a=1; i0=1;
-t = 0:0.01:1;
-Et = 100*cos(2*pi*3*t);
+R=1; a=1; i0=1; %globalie mainigie. ud un id japanem no grafika viena punkta, ja nav dots
+t = 0:0.01:1; %janomaina ar t jas dots
+Et = 100*cos(2*pi*3*t); %Jalieleik savu signalu ar Et = lab3_fun(t), lab3_fun.m jabut taja pasa folderi.
 URm = [];
 for E=Et
     UR = newmet5;
@@ -33,3 +33,6 @@ fx = - 1/R - a*i0*exp(a*(E - UR));
 function fx = funx(UR)
 global E R a i0
 fx = i0*(exp(a*(E-UR))-1)-UR/R;
+
+%ja nav kautkas cits
+%solve(id==i0*(exp(a*Ud)-1),a)
